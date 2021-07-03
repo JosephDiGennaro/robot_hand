@@ -1,10 +1,15 @@
 #include <Servo.h> //includes servo library
 
+// ============= ******* =============
+// Add a comment line before each variable and state their purpose and intial value
+// make sure they are intialized.
+// ============= ******* =============
 int fingerPotPin = A0; // pin recieving potentiometer information
-int thumbPotPin = A1;
-int servoPos;   //servo position to be determined in code by the potentiometer
+int thumbPotPin = A1; // potensial second pin for sensor
+int servoPos = 0;   //servo position to be determined in code by the potentiometer
 int thumbServoPin = 9;
 int fingerServoPin = 10;
+// will have more for all fingers
 int readValueFinger;
 int readValueThumb;
 int writeValueFinger;//servo position to be determined in code by the potentiometer
@@ -24,7 +29,10 @@ void setup() {
 }
 
 void loop() {
-
+// ============= ******* =============
+// Briefly write down as a comment what each line is doing.
+// ============= ******* =============
+  
   readValueFinger = analogRead(fingerPotPin); //reading from potentiometer
   readValueThumb = analogRead(thumbPotPin);
   Serial.print("finger potentiometer reading: ");
